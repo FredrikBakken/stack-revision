@@ -35,10 +35,7 @@ class stack:
 
     # Print
     def stack_print(self):
-        try:
-            print(self.s.pop())
-        except:
-            raise Exception('Not enough elements in the stack.')
+        print(self.s.pop())
     
     # Pop
     def pop(self):
@@ -49,41 +46,23 @@ class stack:
 
     # Add
     def add(self):
-        try:
-            self.push(self.pop() + self.pop())
-            return
-        except:
-            raise Exception('Not enough elements in the stack.')
+        return self.push(self.pop() + self.pop())
 
     # Multiply
     def mul(self):
-        try:
-            self.push(self.pop() * self.pop())
-            return
-        except:
-            raise Exception('Not enough elements in the stack.')
-
+        return self.push(self.pop() * self.pop())
 
     # Subtract
     def sub(self):
-        try:
-            self.push(self.pop() - self.pop())
-            return
-        except:
-            raise Exception('Not enough elements in the stack.')
+        return self.push(self.pop() - self.pop())
 
     # Divide
     def div(self):
-        try:
-            self.push(self.pop() / self.pop())
-            return
-        except:
-            raise Exception('Not enough elements in the stack.')
+        return self.push(self.pop() / self.pop())
     
     # Testing: Get stack
     def get(self):
         print(self.s)
-
 
 
 def evaluate(instructions):
