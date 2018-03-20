@@ -35,7 +35,7 @@ class stack:
 
     # Print
     def stack_print(self):
-        print(self.s.pop())
+        print(self.pop())
     
     # Pop
     def pop(self):
